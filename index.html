@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Intelligent Course-Based Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1><div class="header-logo">🧠</div> Intelligent Course-Based Application</h1>
+    <div class="actions">
+      <div id="welcomeText" style="color:white;font-size:14px;font-weight:500">Welcome, Guest</div>
+      <button class="btn" id="openLogin">Login / Signup</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+            <h2 style="margin:0;font-size:22px;color:var(--accent)">Explore 23 Comprehensive Courses</h2>
+            <div class="small" style="font-size:14px;color:#374151">Start your learning journey</div>
+          </div>
+
+          <div id="coursesList" class="courses"></div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h2 style="margin-top:0">About this Demo</h2>
+          <p class="small">This is a **frontend-only demo** that uses browser **localStorage** to store users, enrollments and scores. It demonstrates a smooth login/signup flow, course enrollment, a simple performance quiz, and progress tracking. To use this as a real application, you would connect it to a proper backend for persistent storage and secure authentication.</p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <div class="profile">
+            <div class="avatar" id="avatarInitial">G</div>
+            <div>
+              <div id="userName" style="font-weight:600">Guest</div>
+              <div class="small" id="userEmail">Not signed in</div>
+            </div>
+          </div>
+
+          <hr style="margin:16px 0;border:none;border-top:1px solid #e1e7f1">
+
+          <h3 style="margin:0 0 10px;font-size:16px;color:#1f2937">My Enrolled Courses</h3>
+          <div id="myCourses" style="display:flex;flex-direction:column;gap:12px"></div>
+          <div style="margin-top:16px;text-align:right"><button class="btn" id="signOutBtn" style="display:none;background:var(--error);color:white;padding:6px 10px;font-size:14px">Sign out</button></div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>Built for demo by Somil — Save the page and try signing up. Data persists in this browser only.</footer>
+  </main>
+
+  <div id="authModal" class="modal" style="display:none">
+    <div class="box">
+      <div class="tabs">
+        <div class="tab active" data-mode="login">Login</div>
+        <div class="tab" data-mode="signup">Signup</div>
+      </div>
+      
+      <div id="loginForm" class="form-active">
+        <div id="loginMsg" class="form-message"></div>
+        <div class="field"><label>Email</label><input id="l_email" placeholder="you@example.com" value="guest@demo" /></div>
+        <div class="field"><label>Password</label><input id="l_pass" type="password" placeholder="password" value="demo123" /></div>
+        <div style="text-align:right"><button class="btn" id="l_submit" style="background:var(--accent);color:white;margin-top:8px">Login</button></div>
+      </div>
+
+      <div id="signupForm" style="display:none">
+        <div id="signupMsg" class="form-message"></div>
+        <div class="field"><label>Full name</label><input id="s_name" placeholder="Your name" /></div>
+        <div class="field"><label>Email</label><input id="s_email" placeholder="you@example.com" /></div>
+        <div class="field"><label>Password</label><input id="s_pass" type="password" placeholder="min 6 characters" /></div>
+        <div style="text-align:right"><button class="btn" id="s_submit" style="background:var(--success);color:white;margin-top:8px">Create account</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="courseModal" class="modal" style="display:none">
+    <div class="box course-details-card">
+      <div id="courseContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

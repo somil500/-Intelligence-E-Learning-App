@@ -1,0 +1,106 @@
+:root{--accent:#0b74de;--muted:#6b7280;--success:#10b981;--error:#ef4444;--logo-color:#e8f4ff}
+    *{box-sizing:border-box}
+    body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; margin:0;background:#f5f7fb;color:#111}
+    header{background:linear-gradient(90deg,var(--accent),#3aa0ff);color:white;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+    header h1{font-size:20px;margin:0;font-weight:700;display:flex;align-items:center;gap:10px}
+    /* Header Logo */
+    .header-logo {width: 24px; height: 24px; border-radius: 5px; background: var(--logo-color); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; color: var(--accent);}
+
+    header .actions{display:flex;gap:10px;align-items:center}
+    .btn{background:white;color:var(--accent);border-radius:10px;padding:8px 12px;border:none;cursor:pointer;font-weight:600;transition:all 0.2s}
+    .btn:hover{background:#e8f4ff;box-shadow:0 2px 6px rgba(11,116,222,0.3)}
+    .container{max-width:1100px;margin:26px auto;padding:0 18px}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .card{background:white;border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(12,20,40,0.06)}
+
+    /* Course list */
+    .courses{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+    .course{padding:16px;border-radius:12px;border:1px solid #eef3fb;transition:box-shadow 0.2s}
+    .course:hover{box-shadow:0 4px 12px rgba(12,20,40,0.1)}
+    .course h3{margin:0;font-size:17px;color:#1f2937}
+    .course p{margin:0 0 8px;color:var(--muted);font-size:14px;min-height:36px}
+    .course .meta{display:flex;justify-content:space-between;align-items:center}
+    .course .meta .small{font-size:13px;color:var(--muted);font-weight:500}
+    .course .btn{padding:6px 10px;font-size:14px}
+    
+    /* Course Icon Style */
+    .course-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+    .course-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+    /* Specific Icon Styles (Expanded for 23 courses) */
+    .icon-js{background:#f7df1e;color:#323330;}
+    .icon-react{background:#61dafb;color:#282c34;}
+    .icon-py{background:#306998;color:#ffe873;}
+    .icon-node{background:#68a063;color:white;}
+    .icon-aws{background:#ff9900;color:white;font-size:14px}
+    .icon-ds{background:#7e57c2;color:white;font-size:16px}
+    .icon-next{background:#000;color:white;font-size:16px}
+    .icon-devops{background:#00bcd4;color:white;font-size:16px}
+    .icon-cyber{background:#ef4444;color:white;font-size:16px}
+    .icon-go{background:#00acd7;color:white;font-size:16px}
+    .icon-tailwind{background:#06b6d4;color:white;font-size:16px}
+    .icon-sql{background:#336791;color:white;font-size:16px}
+    .icon-ai{background:#f59e0b;color:white;font-size:16px}
+    .icon-ts{background:#007acc;color:white;font-size:16px}
+    
+    /* New Course Icons */
+    .icon-java{background:#e76f00;color:white;} /* Java (Coffee Cup) */
+    .icon-spring{background:#6cc24a;color:white;font-size:14px;} /* Spring Boot (Leaf) */
+    .icon-micro{background:#374151;color:white;font-size:16px;} /* Microservices (Gear) */
+    .icon-git{background:#f1502f;color:white;font-size:14px;} /* Git (Octopus) */
+    .icon-mongo{background:#47a248;color:white;font-size:16px;} /* MongoDB (Leaf) */
+    .icon-sqldb{background:#595959;color:white;font-size:16px;} /* SQL (Database) */
+    .icon-apti{background:#f97316;color:white;font-size:14px;} /* Aptitude (Plus Sign) */
+    .icon-eng{background:#0ea5e9;color:white;font-size:16px;} /* English (Speaker) */
+    .icon-linux{background:#333333;color:white;font-size:14px;} /* Linux (Penguin) */
+    .icon-cloudsec{background:#0078d4;color:white;font-size:16px;} /* Cloud Security (Shield) */
+
+
+    /* Sidebar */
+    .profile{display:flex;gap:12px;align-items:center}
+    .avatar{width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,#fff,#f0f6ff);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:20px}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* My courses */
+    .my-course{display:flex;align-items:center;gap:12px;padding:12px;border-radius:10px;border:1px solid #e1e7f1;background:#fcfdff}
+    .my-course-info{flex:1;display:flex;flex-direction:column}
+    .my-course-info > div:first-child{display:flex;align-items:center;gap:8px;font-weight:700;margin-bottom:4px}
+    .my-course-info .course-icon{width:24px;height:24px;border-radius:4px;font-size:12px} /* Smaller icon in sidebar */
+
+    .progress{height:10px;background:#eef3fb;border-radius:12px;overflow:hidden}
+    .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--success),#34d399);transition:width 0.5s}
+
+    footer{margin:36px 0 80px;text-align:center;color:var(--muted)}
+
+    /* Modals / forms */
+    .modal{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:flex;align-items:center;justify-content:center;padding:18px;z-index:100}
+    .modal .box{width:100%;max-width:480px;background:white;border-radius:16px;padding:24px;box-shadow:0 10px 25px rgba(12,20,40,0.2)}
+    .field{display:flex;flex-direction:column;margin-bottom:12px}
+    .field label{font-size:14px;margin-bottom:6px;color:#374151;font-weight:500}
+    .field input, .field select, .field textarea{padding:12px;border-radius:10px;border:1px solid #e6eef9;font-size:16px}
+    .field input:focus{border-color:var(--accent);outline:none}
+
+    .tabs{display:flex;gap:0;margin-bottom:18px;border-bottom:2px solid #eef3fb}
+    .tab{padding:10px 18px;border-radius:0;background:transparent;color:var(--muted);cursor:pointer;font-weight:600;border-bottom:2px solid transparent;transition:all 0.2s}
+    .tab.active{color:var(--accent);border-bottom:2px solid var(--accent)}
+    .form-message{padding:10px;border-radius:8px;margin-bottom:12px;display:none}
+    .form-message.success{background:#d1fae5;color:var(--success)}
+    .form-message.error{background:#fee2e2;color:var(--error)}
+    .form-active{display:block}
+
+    /* Course Details/Quiz Styles */
+    .course-details-card{max-width:720px;width:100%}
+    .quiz-options .optBtn{background:#f3f7fb;color:#1f2937;border:1px solid #eef3fb;width:100%;text-align:left;margin-bottom:8px;transition:all 0.1s}
+    .quiz-options .optBtn:hover{background:#e8f4ff;border-color:var(--accent);color:var(--accent)}
+    .quiz-options .optBtn.correct{background:var(--success);color:white;border-color:var(--success)}
+    .quiz-options .optBtn.wrong{background:var(--error);color:white;border-color:var(--error)}
+    .quiz-options .optBtn.correct:after{content:' (Correct)';font-weight:600}
+    .quiz-options .optBtn.wrong:after{content:' (Incorrect)';font-weight:600}
+    
+    /* Materials List Style */
+    .materials-list li{list-style:none; padding:10px 12px; border-bottom:1px solid #f1f5f9; display:flex; justify-content:space-between; align-items:center; font-size:14px}
+    .materials-list li:last-child{border-bottom:none}
+    .materials-list strong{color:#1f2937}
+
+    
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.container{padding:12px}}
